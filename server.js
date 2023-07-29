@@ -29,8 +29,6 @@ const port = process.env.port || 2050;
 
 
 
-
-
 app.get("/",(req,res) => {
     console.log("i was here")
  res.json({
