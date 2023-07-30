@@ -18,8 +18,11 @@ app.use(cookieSession({
 }))
 
 app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.session());
 
+
+
+require("./Modles/User")
 require("./strategies/jsonwtstrategy")(passport)
 
 const port = process.env.port || 2050;
