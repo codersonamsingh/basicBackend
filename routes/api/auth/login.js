@@ -9,6 +9,8 @@ router.get("/sendOtp", (req,res)=> {
 
     })
 
-
-
 })
+
+module.exports = router
+
+
