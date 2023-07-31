@@ -6,7 +6,14 @@ const passport = require("passport");
 const cookieSession = require("cookie-session");
 const mongoose = require("mongoose");
 
+//bring all routes
+const login = require("./routes/api/auth")
+
 const app = express();
+
+//call all routes
+app.use("/api/v1/auth/login",login)
+
 
 //configure middleware
 
