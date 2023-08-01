@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const upload = require("express-fileupload");
 
 //bring all routes
-const login = require("./routes/api/auth")
+const login = require("./routes/api/auth/login")
 
 const app = express();
 app.use(upload({useTempFiles:true}))
@@ -35,9 +35,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 //passport strategy
-
-
-require("./Modles/User")
+require("./Models/User")
 require("./strategies/jsonwtstrategy")(passport)
 
 //data base connection
@@ -57,8 +55,6 @@ app.get("/*",function(req,res){
       }
 
    )
-
-
 
 })
 
