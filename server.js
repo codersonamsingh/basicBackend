@@ -37,7 +37,7 @@ app.use(passport.session());
 //passport strategy
 require("./Models/User")
 require("./strategies/jsonwtstrategy")(passport)
-
+ 
 //data base connection
 
 const db = require("./setup/myUrl").mongoURL
